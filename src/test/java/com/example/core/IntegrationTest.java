@@ -1,6 +1,5 @@
 package com.example.core;
 
-import com.example.core.CoreApp;
 import com.example.core.config.AsyncSyncConfiguration;
 import com.example.core.config.EmbeddedElasticsearch;
 import com.example.core.config.EmbeddedKafka;
@@ -18,7 +17,7 @@ import org.springframework.test.annotation.DirtiesContext;
  */
 @Target(ElementType.TYPE)
 @Retention(RetentionPolicy.RUNTIME)
-@SpringBootTest(classes = { CoreApp.class, AsyncSyncConfiguration.class, TestSecurityConfiguration.class })
+@SpringBootTest(classes = { Application.class, AsyncSyncConfiguration.class, TestSecurityConfiguration.class })
 @EmbeddedElasticsearch
 @EmbeddedKafka
 @EmbeddedSQL

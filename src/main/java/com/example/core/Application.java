@@ -20,13 +20,13 @@ import tech.jhipster.config.JHipsterConstants;
 
 @SpringBootApplication
 @EnableConfigurationProperties({ LiquibaseProperties.class, ApplicationProperties.class })
-public class CoreApp {
+public class Application {
 
-    private static final Logger log = LoggerFactory.getLogger(CoreApp.class);
+    private static final Logger log = LoggerFactory.getLogger(Application.class);
 
     private final Environment env;
 
-    public CoreApp(Environment env) {
+    public Application(Environment env) {
         this.env = env;
     }
 
@@ -64,7 +64,7 @@ public class CoreApp {
      * @param args the command line arguments.
      */
     public static void main(String[] args) {
-        SpringApplication app = new SpringApplication(CoreApp.class);
+        SpringApplication app = new SpringApplication(Application.class);
         DefaultProfileUtil.addDefaultProfile(app);
         Environment env = app.run(args).getEnvironment();
         logApplicationStartup(env);
